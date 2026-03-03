@@ -14,6 +14,8 @@ func main() {
 	arrayExample()
 	fmt.Println()
 	sliceExample()
+	fmt.Println()
+	forLoopExample()
 }
 
 func secondaryFunction() {
@@ -53,4 +55,10 @@ func sliceExample() {
 	
 	slice = append(slice, 60)
 	fmt.Println("Slice after appending 60:", slice)
+}
+
+func forLoopExample() {
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Iteration %d\n", i)
+	}
 }
