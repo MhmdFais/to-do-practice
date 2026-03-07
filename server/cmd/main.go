@@ -16,6 +16,8 @@ func main() {
 	sliceExample()
 	fmt.Println()
 	forLoopExample()
+	fmt.Println()
+	mapExample()
 }
 
 func secondaryFunction() {
@@ -60,5 +62,28 @@ func sliceExample() {
 func forLoopExample() {
 	for i := 0; i < 5; i++ {
 		fmt.Printf("Iteration %d\n", i)
+	}
+}
+
+func mapExample() {
+	var myMap map[string]int = make(map[string]int)
+	// key = string, value = int
+	
+	myMap["Alice"] = 30
+	myMap["Bob"] = 25
+	myMap["Charlie"] = 35
+	fmt.Println("Map of people and their ages:", myMap)
+	fmt.Println()
+	fmt.Println("Alice's age:", myMap["Alice"])
+
+	var age, exists = myMap["David"]
+	if exists {
+		fmt.Println("David's age:", age)
+	} else {
+		fmt.Println("David is not in the map.")
+	}
+
+	for name, age := range myMap {
+		fmt.Printf("%s is %d years old.\n", name, age)
 	}
 }
